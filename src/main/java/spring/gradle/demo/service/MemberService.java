@@ -18,9 +18,9 @@ public class MemberService {
 	}
 	
 	/*
-	 * 회원 가입
+		회원 가입
 	 */
-	public Long join(Member member) {	
+	public Long join(Member member) {
 		validateDuplicateMember(member);// 중복 회원 검증
 		memberRepository.save(member);
 		return member.getId();
@@ -38,7 +38,6 @@ public class MemberService {
 			});
 		//람다식 이런 식으로 쓴다는 게 너무 놀랍다;;
 	}
-	
 	/*
 	 * 전체 회원 조회
 	 */
